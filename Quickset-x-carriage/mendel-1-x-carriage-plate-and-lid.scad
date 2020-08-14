@@ -17,7 +17,7 @@ include <bearing-mount-include.scad>
 include <belt-clamp-readme.scad>
 
 // Print one plate and one lid.
-pplate=false;
+pplate=true;
 if(pplate){
 	plate();
 }else{
