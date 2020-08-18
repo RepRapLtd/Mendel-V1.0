@@ -305,14 +305,16 @@ module hot_end_holes(tail=true)
 			translate(pillar_m)
 				cylinder(r=1.7,h=60,center=true,$fn=20);
 
+        //translate([0, 0,0]) // Pre Quickset
+        translate([0, 0.5,0]) // Quickset
 		union()
 		{
 			//cylinder(r=3.5,h=15,center=true,$fn=20); // Pre quickset
             //translate([0, -5,0])
 			//	cube([7,10,15],center=true);
-            cylinder(r=2.5,h=15,center=true,$fn=20); // Quickset
+            cylinder(r=1.6,h=15,center=true,$fn=20); // Quickset
             translate([0, -5,0])
-				cube([5,10,15],center=true);
+				cube([3.2,10,15],center=true);
 		}
 
 		translate([0,0,-15])
@@ -325,15 +327,15 @@ module hot_end_holes(tail=true)
 		
 		for(x=[-1,1])
 			//translate([x*15/2, 0,-3]) // pre Quickset
-        	translate([x*10, 0,-3]) // Quickset
+        	translate([x*9.5, 0.3,-3]) // Quickset
 				union()
 				{
 					//cylinder(r=m3_diameter/2,h=50,center=true,$fn=20); // pre Quickset
 					//translate([0, -5,0])
 					//	cube([m3_diameter,10,50],center=true);
-                    cylinder(r=2.5,h=50,center=true,$fn=20); // Quickset
-					translate([0, -5,0])
-						cube([5,10,50],center=true);
+                    cylinder(r=2.7,h=50,center=true,$fn=20); // Quickset
+					translate([0, -5.2,0])
+						cube([5.4,10,50],center=true);
 				}
 	}
 }
